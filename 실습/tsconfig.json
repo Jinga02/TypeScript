@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // 컴파일된 JavaScript의 목표 버전
+    "module": "commonjs", // 컴파일된 JavaScript 모듈 시스템
+    "outDir": "./dist", // 컴파일된 JavaScript 파일의 출력 디렉토리
+    "strict": true, // 엄격한 타입 검사 사용
+    "esModuleInterop": true, // CommonJS와 ES 모듈 간 상호 운용성 활성화
+    "moduleDetection": "force" // 모든 타입스크립트 파일을 개별 모듈로 인식
+  },
+  "include": ["src/**/*.ts"], // 컴파일할 TypeScript 파일 경로
+  "exclude": ["node_modules"] // 제외할 디렉토리나 파일
+}
