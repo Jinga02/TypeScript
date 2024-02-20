@@ -22,12 +22,18 @@ let a: void;
 // a = "ndnd";
 // a = undefined;
 
+// 그럼 왜 null이나 undefined를 return 하지 않고 void로 타입을 선언하느냐?
+function func4(): void {
+  console.log("hello");
+}
+// 위 함수처럼 ㄹㅇ return자체를 안적고 반환값이 없는 함수를 구현하기 위해!!
+
 // never
 // never -> 존재하지 않는
 // 불가능한 타입
 
 // 아무것도 반환하지 않는 무한루프
 // 절대 반환할 수 없어서 이 함수에 반환값이 있다는거 자체가 모순이다!! 할 때
-function func4() {
+function func5() {
   while (true) {}
 }
