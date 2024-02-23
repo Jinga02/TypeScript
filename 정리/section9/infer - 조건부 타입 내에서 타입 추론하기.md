@@ -33,6 +33,7 @@ type C = ReturnType<number> // 이땐 never로 추론한다...
 ```ts
 // 1. T는 promise 타입 이어야 한다.
 // 2. promise 타입의 결과값 타입을 반환해야한다.
+
 type PromiseUnpack<T> = T extends Promise<ifer R> ? R : never
 type PromiseA = PromiseUnpack<Promise<number>>;
 type PromiseB = PromiseUnpack<Promise<string>>;
