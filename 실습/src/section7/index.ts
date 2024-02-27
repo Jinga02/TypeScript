@@ -148,8 +148,117 @@
 
 // whoAreYou({ name: "재환", profile: { job: "developer", skill: "JavaScript" } });
 
-interface User<T> {
+// interface User<T> {
+//   name: string;
+//   age: number;
+//   profile: T;
+// }
+
+// interface Student {
+//   type: "student";
+//   school: string;
+// }
+
+// interface Developer {
+//   type: "developer";
+//   skills: string[];
+// }
+
+// const student: User<Student> = {
+//   name: "진재환",
+//   age: 19,
+//   profile: {
+//     type: "student",
+//     school: "학교",
+//   },
+// };
+
+// const developer: User<Developer> = {
+//   name: "진재환",
+//   age: 12,
+//   profile: {
+//     type: "developer",
+//     skills: ["Node", "JavaScript"],
+//   },
+// };
+
+// function goToSchool(user: User<Student>) {
+//   const school = user.profile.school;
+//   console.log(`${school}가자 ~`);
+// }
+
+// function letCoding(user: User<Developer>) {
+//   const skills = user.profile.skills;
+//   console.log(`${skills}가지고 코딩 하자 ~`);
+// }
+
+// goToSchool(student);
+// letCoding(developer);
+// type User = {
+//   [key: number]: string;
+//   name: string;
+// };
+
+// const user123: User = {
+//   1: "진",
+//   name: "123",
+// };
+
+// class List<T> {
+//   constructor(private list: T[]) {}
+//   push(data: T) {
+//     this.list.push(data);
+//   }
+//   pop() {
+//     return this.list.pop();
+//   }
+//   print() {
+//     console.log(this.list);
+//   }
+// }
+
+// const userList = new List<number>([1, 2, 3]);
+// console.log(userList);
+// userList.push(2);
+// userList.pop();
+// userList.print();
+
+// let promise = new Promise<number>((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(20);
+//     reject("응 실패~");
+//   }, 3000);
+// });
+
+// promise.then((res) => {
+//   console.log(res);
+//   console.log(res * 20);
+// });
+
+// promise.catch((err) => {
+//   console.log(err);
+// });
+
+interface Post {
   name: string;
   age: number;
-  profile: T;
 }
+
+function fetchPost(): Promise<Post> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // resolve({
+      //   name: "진재환",
+      //   age: 12,
+      // });
+      reject("풉ㅋ풉ㅋ");
+    }, 2000);
+  });
+}
+fetchPost()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
