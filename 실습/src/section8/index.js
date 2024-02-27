@@ -1,9 +1,9 @@
 /** @format */
 var user = {
-    name: "진재환",
+    id: 1,
+    //   name: "재환",
     age: 12,
 };
-function keyValue(user, key) {
-    console.log(user[key]);
-}
-keyValue(user, "name");
+var user2 = {
+    name: "재환",
+};
